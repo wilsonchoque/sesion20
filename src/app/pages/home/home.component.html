@@ -1,0 +1,13 @@
+<div class="container w-1/4 border p-4 border-black-900 mx-auto rounded mt-5 ">
+    <h1 class="text-center m-5 text-2xl font-arial uppercase font-bold">Usuarios</h1>
+    <div class="cuadro  mb-2 w-3/5 mx-auto">
+        <button class="bg-red-600 hover:bg-red-800 text-white font-semibold py-2 px-7 m-0 rounded " (click)="mostrar()" >Mostrar Usuarios</button>
+    </div>    
+    <div class="lista" *ngIf="elemento" >
+        <ul class="ml-5">
+            <li class="list-disc" *ngFor="let user of usuarios">
+                {{user.name | json}}
+            </li>
+        </ul>
+    </div>
+</div>
